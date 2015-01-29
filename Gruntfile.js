@@ -24,12 +24,24 @@ module.exports = function(grunt) {
             less: {
                 files: ['sass/**/*.scss'],
                 tasks: ['sass', 'autoprefixer', 'cssmin']
+            },
+            options: {
+                livereload: true
             }
-        }
+        },
+        connect: {
+            server: {
+                options: {
+                    port: 9001,
+                    base: '.'
+                }
+            }
+          }
     });
 
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-connect');
 };

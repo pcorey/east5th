@@ -22,8 +22,9 @@ body {
     mix-blend-mode: soft-light;
 }
 
-body > section {
+body > section, body > header {
     background: rgba(255,255,255,0.5);
+    margin: 1em 0;
     width: 100%;
     max-height: 0;
     opacity: 0;
@@ -42,14 +43,44 @@ body > section {
         font-weight: 300;
         font-size: 18px;
         line-height: 1.6;
-        text-align: center;
+        text-align: justify;
+
+        .blockquote {
+            display: inline-block;
+            margin-left: 10%;
+            padding-left: 10px;
+            border-left: 2px solid rgba(0,0,0,0.25);
+        }
     }
 
     a {
         color: #3489ff;
         text-decoration: none;
     }
+}
 
+body > header {
+    text-align: center;
+    a {
+        text-decoration: none;
+        display: inline-block;
+        margin: 0.5em 1em;
+        padding: 0.25em 0;
+        max-width: 800px;
+        color: rgba(0,0,0,0.5);
+        font-family: 'Lato';
+        font-weight: 300;
+        font-size: 30px;
+        line-height: 1;
+        text-align: left;
+        text-transform: uppercase;
+        border-bottom: 2px solid rgba(0,0,0,0.0);
+        transition: all 0.25s ease-in-out;
+    }
+
+    a.active, a:hover {
+        border-bottom: 2px solid rgba(0,0,0,0.25);
+    }
 }
 
 @keyframes slidein {
