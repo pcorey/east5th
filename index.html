@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link href="css/main.css" rel="stylesheet">
+        <meta charset="utf-8" />
+        <link href="/css/main.css" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic|Share+Tech|Share' rel='stylesheet' type='text/css'>
+        <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+        <script src="/js/main.js"></script>
     </head>
     <body>
-        <img class="logo" src="img/east5th.svg">
+        <img class="logo" src="/img/east5th.svg">
         <!-- <section>
             <p>East5th is a web consultation and development company focused on solving real-world proglems with real-world solutions. We specialize in building dependable, real-time web applications.</p>
         </section> -->
@@ -13,18 +16,55 @@
             <p>East5th is a web consulting and development company dedictated 
             <p>Say <a href="mailto:hello@east5th.co">hello</a></p>
         </section> -->
-        <header>
-            <a href="#information" class="control active" data-tab="information">Information</a>
-            <a href="#services" class="control" data-tab="services">Services</a>
-            <a href="#contact" class="control" data-tab="contact">Contact</a>
-        </header>
-        <section class="services">
-            <p>At East5th, we live for building fully responsive, real-time, single-page web applications targeted at modern web browsers. While our current preferred technology stack is <a href="https://www.meteor.com/">Meteor</a>, we have extensive experience with a variety of front and back-end frameworks like <a href="https://angularjs.org/">AngularJS</a>, <a href="http://laravel.com/">Laravel</a>, <a href="http://jquery.com/">jQuery</a>, and <a href="http://nodejs.org/">Node.js</a>.</p>
-
-            <p>We use a vast array of tools to do our work, but at the end of the day our goal is simplicity. We strive to create the most straight forward and intuitive solution possible to any given problem.</p>
-
-            <!-- <p><span class="blockquote">Simplicity is the final achievement. After one has played a vast quantity of notes and more notes, it is simplicity that emerges as the crowning reward of art.</span></p> -->
+        <nav>
+            <hgroup>
+                <a href="#information" class="control" data-tab="information">Information</a>
+                <!-- <a href="#services" class="control" data-tab="services">Services</a> -->
+                <a href="#contact" class="control" data-tab="contact">Contact</a>
+            </hgroup>
+        </nav>
+        <section class="information" id="information">
+            <article>
+                <h1>Information</h1>
+                <p>East5th is a web development and consultation company dedicated to building real-world solutions to real-world problems. While our bread and butter is developing reactive web applications targeted towards modern web browsers, we understand that every problem is unique and requires a unique solution. We believe in using iterative development practices to provide as much initial value as possible, while keeping future improvements in mind.</p>
+                <p>We believe that the best way to build software is to truly understand the motivation behind its creation. This kind of understanding is built through a relationship of open, honest communication with our clients. For this reason, East5th's founder, <a href="http://1pxsolidtomato.com/">Pete Corey</a>, spearheads all projects and brings in additional resources only when necessary.</p>
+            </article>
         </section>
-        <script src="js/main.js"></script>
+        <!-- <section class="services" id="services">
+            <article>
+                <h1>Services</h1>
+                <p>At East5th, we live for building fully responsive, real-time, single-page web applications targeted at modern web browsers. While our current preferred technology stack is <a href="https://www.meteor.com/">Meteor</a>, we have extensive experience with a variety of front and back-end frameworks like <a href="https://angularjs.org/">AngularJS</a>, <a href="http://laravel.com/">Laravel</a>, <a href="http://jquery.com/">jQuery</a>, and <a href="http://nodejs.org/">Node.js</a>.</p>
+                <p>We use a vast array of tools to do our work, but at the end of the day our goal is simplicity. We strive to create the most straight forward and intuitive solution possible to any given problem.</p>
+                <p><span class="blockquote">Simplicity is the final achievement. After one has played a vast quantity of notes and more notes, it is simplicity that emerges as the crowning reward of art.</span></p>
+            </article>
+        </section> -->
+        <section class="contact" id="contact">
+            <article>
+            <h1>Contact</h1>
+            <p>Have a problem or project you’d like us to discuss? We'd love to hear about it! Getting the conversation started is as simple as answering a few basic questions. If this isn't related to new project work, feel free to say <a href="hello@east5th.co">hello</a>.</p>
+            <form action="//formspree.io/hello@east5th.co">
+                <p id="name" class="visible">
+                    <label>What is your name? What is your company's name?</label>
+                    <input name="name" required>
+                </p>
+                <p id="email" class="visible">
+                    <label>What is your email address?</label>
+                    <input name="email" type="email" required>
+                </p>
+                <p id="description" class="visible">
+                    <label>Please describe the project as best you can:</label>
+                    <textarea name="description" rows="3"></textarea>
+                </p>
+                <p id="deadline" class="visible">
+                    <label>Is there a deadline for this project?</label>
+                    <input name="deadline" type="date" data-next="#motivation">
+                </p>
+                <p id="motivation">
+                    <label>What is the motivation behind that deadline?</label>
+                    <input name="motivation">
+                </p>
+            </form>
+            </article>
+        </section>
     </body>
 </html>
